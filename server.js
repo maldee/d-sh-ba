@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 var corsOptions = {
-    origin: "http://localhost:4200"
+    origin: "https://deeshop-99663.web.app"
 };
 
 app.use(cors(corsOptions));
