@@ -7,10 +7,7 @@ const sequelize = new Sequelize(
     config.PASSWORD, {
         host: config.HOST,
         dialect: config.dialect,
-        dialectOptions: {
-            "ssl": true,
-            ssl: { rejectUnauthorized: false }
-        },
+        dialectOptions: {},
         operatorsAliases: false,
         pool: {
             max: config.pool.max,
@@ -21,17 +18,7 @@ const sequelize = new Sequelize(
     }
 );
 
-// Localhost 
-
 // dialectOptions: {}
-
-
-// Heroku Host
-
-// dialectOptions: {
-//     "ssl": true,
-//     ssl: { rejectUnauthorized: false }
-// },
 
 const db = {};
 
@@ -39,7 +26,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = require("../models/user/user.model.js")(sequelize, Sequelize);
-db.order = require("../models/user/order.model.js")(sequelize, Sequelize);
+db.user_order = require("../models/user/user.order.model.js")(sequelize, Sequelize);
 
 db.role = require("../models/user/role.model.js")(sequelize, Sequelize);
 

@@ -21,31 +21,17 @@ const sequelize = new Sequelize(
     }
 );
 
-// Localhost 
-
-// dialectOptions: {}
-
-
-// Heroku Host
-
-// dialectOptions: {
-//     "ssl": true,
-//     ssl: { rejectUnauthorized: false }
-// },
-
 const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = require("../models/user/user.model.js")(sequelize, Sequelize);
-db.order = require("../models/user/order.model.js")(sequelize, Sequelize);
-
 db.role = require("../models/user/role.model.js")(sequelize, Sequelize);
 
 db.store_product = require("../models/store/store.product.model.js")(sequelize, Sequelize);
 db.store_product_category = require("../models/store/store.product.category.model.js")(sequelize, Sequelize);
-
+db.store_order = require("../models/store/store.order.model.js")(sequelize, Sequelize);
 
 db.blog_post = require("../models/blog/blog.post.model.js")(sequelize, Sequelize);
 db.blog_category = require("../models/blog/blog.category.model.js")(sequelize, Sequelize);

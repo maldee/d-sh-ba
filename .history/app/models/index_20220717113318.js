@@ -21,12 +21,7 @@ const sequelize = new Sequelize(
     }
 );
 
-// Localhost 
-
 // dialectOptions: {}
-
-
-// Heroku Host
 
 // dialectOptions: {
 //     "ssl": true,

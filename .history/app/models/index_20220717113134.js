@@ -7,10 +7,7 @@ const sequelize = new Sequelize(
     config.PASSWORD, {
         host: config.HOST,
         dialect: config.dialect,
-        dialectOptions: {
-            "ssl": true,
-            ssl: { rejectUnauthorized: false }
-        },
+        dialectOptions: {},
         operatorsAliases: false,
         pool: {
             max: config.pool.max,
@@ -21,17 +18,7 @@ const sequelize = new Sequelize(
     }
 );
 
-// Localhost 
-
 // dialectOptions: {}
-
-
-// Heroku Host
-
-// dialectOptions: {
-//     "ssl": true,
-//     ssl: { rejectUnauthorized: false }
-// },
 
 const db = {};
 

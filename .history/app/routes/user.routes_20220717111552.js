@@ -1,6 +1,6 @@
 const { authJwt } = require("../middleware");
 const controller = require("../controllers/user/user.controller");
-const orderController = require("../controllers/user/order.controller");
+const orderController = require("../controllers/user/user.order.controller");
 
 module.exports = function(app) {
     app.use(function(req, res, next) {
@@ -21,16 +21,6 @@ module.exports = function(app) {
     app.get(
         "/api/user/orders",
         orderController.findAllOrders
-    );
-
-    app.get(
-        "/api/user/createOrder",
-        orderController.createOrder
-    );
-
-    app.get(
-        "/api/user/order/:id",
-        orderController.findByOrderId
     );
 
     app.get(

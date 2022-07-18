@@ -29,11 +29,6 @@ module.exports = function(app) {
     );
 
     app.get(
-        "/api/user/order/:id",
-        orderController.findByOrderId
-    );
-
-    app.get(
         "/api/test/mod", [authJwt.verifyToken, authJwt.isModerator],
         controller.moderatorBoard
     );

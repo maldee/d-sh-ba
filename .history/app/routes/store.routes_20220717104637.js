@@ -16,6 +16,10 @@ module.exports = function(app) {
         storeProductController.findAllProducts
     );
 
+    app.get(
+        "/api/store/products",
+        storeProductController.findAllProducts
+    );
 
     app.get(
         "/api/store/products/categories",
