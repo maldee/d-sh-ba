@@ -6,9 +6,7 @@ const helmet = require('helmet');
 
 var upload = multer();
 const app = express();
-
-
-// Heroku deployment
+// app.use(helmet());
 
 // app.use(cors());
 // var corsOptions = {
