@@ -19,17 +19,17 @@ module.exports = function(app) {
     );
 
     app.get(
-        "/api/shop/orders",
+        "/api/user/orders",
         orderController.findAllOrders
     );
 
     app.get(
-        "/api/shop/createOrder",
+        "/api/user/createOrder",
         orderController.createOrder
     );
 
     app.get(
-        "/api/shop/order/:id",
+        "/api/user/order/:id",
         orderController.findByOrderId
     );
 

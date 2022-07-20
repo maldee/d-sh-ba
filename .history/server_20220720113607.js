@@ -11,14 +11,14 @@ const app = express();
 app.use(cors());
 
 // Heroku
-var corsOptions = {
-    origin: "https://deeshop-99663.web.app"
-};
+// var corsOptions = {
+//     origin: "https://deeshop-99663.web.app"
+// };
 
 // localhost
-// var corsOptions = {
-//     origin: "http://localhost:4200"
-// };
+var corsOptions = {
+    origin: "http://localhost:4200"
+};
 
 
 app.use(cors(corsOptions));
